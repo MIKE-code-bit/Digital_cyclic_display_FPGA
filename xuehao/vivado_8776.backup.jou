@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat May  3 08:48:57 2025
+# Process ID: 8776
+# Current directory: D:/FPGA/xuehao
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18644 D:\FPGA\xuehao\xuehao.xpr
+# Log file: D:/FPGA/xuehao/vivado.log
+# Journal file: D:/FPGA/xuehao\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/xuehao/xuehao.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg[7]} {seg[6]} {seg[5]} {seg[4]} {seg[3]} {seg[2]} {seg[1]} {seg[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {sel[7]} {sel[6]} {sel[5]} {sel[4]} {sel[3]} {sel[2]} {sel[1]} {sel[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+place_ports {seg[0]} B4
+place_ports {seg[1]} A4
+place_ports {seg[2]} A3
+place_ports {seg[3]} B1
+place_ports {seg[4]} A1
+place_ports {seg[5]} B3
+place_ports {seg[6]} B2
+place_ports {seg[7]} D5
+place_ports {sel[0]} G6
+place_ports {sel[1]} E1
+set_property package_pin "" [get_ports [list  {sel[3]}]]
+place_ports {sel[2]} F1
+place_ports {sel[3]} G1
+place_ports {sel[4]} H1
+place_ports {sel[5]} C1
+place_ports {sel[6]} C2
+place_ports {sel[7]} G3
+place_ports {sel[7]} G2
+place_ports clk P17
+file mkdir D:/FPGA/xuehao/xuehao.srcs/constrs_1/new
+close [ open D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc w ]
+add_files -fileset constrs_1 D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc
+set_property target_constrs_file D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+startgroup
+set_property package_pin "" [get_ports [list  {seg[0]}]]
+place_ports {seg[7]} B4
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[1]}]]
+place_ports {seg[6]} A4
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[2]}]]
+place_ports {seg[5]} A3
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[3]}]]
+place_ports {seg[4]} B1
+endgroup
+place_ports {seg[3]} A1
+place_ports {seg[2]} B3
+place_ports {seg[1]} B2
+place_ports {seg[0]} D5
+save_constraints -force
+reset_run impl_1
+refresh_design
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+set_property package_pin "" [get_ports [list  rst]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst]]
+place_ports rst P5
+save_constraints
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+place_ports rst V1
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw

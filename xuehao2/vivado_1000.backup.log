@@ -1,0 +1,292 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat May  3 12:05:18 2025
+# Process ID: 1000
+# Current directory: D:/FPGA/xuehao2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14196 D:\FPGA\xuehao2\xuehao2.xpr
+# Log file: D:/FPGA/xuehao2/vivado.log
+# Journal file: D:/FPGA/xuehao2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/xuehao2/xuehao2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 12:07:44 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 12:10:05 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA/xuehao2/xuehao2.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [D:/FPGA/xuehao2/xuehao2.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1087.352 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1282.059 ; gain = 431.137
+launch_runs impl_1 -jobs 10
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1674.539 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1674.539 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1679.277 ; gain = 0.000
+[Sat May  3 12:11:02 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 12:11:48 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 12:15:07 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 12:15:33 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 12:16:16 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 17:03:15 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 17:03:58 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 17:04:45 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 17:08:36 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 17:09:05 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 17:09:47 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+startgroup
+set_property package_pin "" [get_ports [list  {a_to_g[6]}]]
+place_ports {a_to_g[13]} B4
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {a_to_g[5]}]]
+place_ports {a_to_g[12]} A4
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {a_to_g[3]}]]
+place_ports {a_to_g[11]} B1
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {a_to_g[2]}]]
+place_ports {a_to_g[10]} A1
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {a_to_g[1]}]]
+place_ports {a_to_g[9]} B3
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {a_to_g[0]}]]
+place_ports {a_to_g[8]} B2
+endgroup
+place_ports {a_to_g[7]} D5
+set_property package_pin "" [get_ports [list  {a_to_g[6]}]]
+place_ports {a_to_g[7]} D4
+place_ports {a_to_g[6]} E3
+place_ports {a_to_g[5]} D3
+place_ports {a_to_g[4]} F4
+place_ports {a_to_g[3]} F3
+place_ports {a_to_g[2]} E2
+place_ports {a_to_g[1]} D2
+set_property package_pin "" [get_ports [list  {a_to_g[0]}]]
+place_ports {a_to_g[11]} A3
+place_ports {a_to_g[10]} B1
+place_ports {a_to_g[9]} A1
+place_ports {a_to_g[8]} B3
+place_ports {a_to_g[7]} B2
+place_ports {a_to_g[6]} D4
+place_ports {a_to_g[5]} E3
+place_ports {a_to_g[4]} D3
+place_ports {a_to_g[3]} F4
+place_ports {a_to_g[2]} F3
+place_ports {a_to_g[1]} E2
+place_ports {a_to_g[0]} D2
+save_constraints -force
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2840.738 ; gain = 0.000
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 17:14:15 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 17:15:02 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 17:15:45 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao2/xuehao2.runs/impl_1/xuehao.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 17:22:24 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 17:22:54 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 17:23:37 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao2/xuehao2.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  3 17:24:31 2025...

@@ -1,0 +1,313 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat May  3 08:48:57 2025
+# Process ID: 8776
+# Current directory: D:/FPGA/xuehao
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18644 D:\FPGA\xuehao\xuehao.xpr
+# Log file: D:/FPGA/xuehao/vivado.log
+# Journal file: D:/FPGA/xuehao\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/xuehao/xuehao.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 732.000 ; gain = 122.227
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 08:55:02 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 979.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 1175.801 ; gain = 441.613
+launch_runs impl_1 -jobs 10
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1614.848 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+[Sat May  3 09:00:47 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg[7]} {seg[6]} {seg[5]} {seg[4]} {seg[3]} {seg[2]} {seg[1]} {seg[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {sel[7]} {sel[6]} {sel[5]} {sel[4]} {sel[3]} {sel[2]} {sel[1]} {sel[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+place_ports {seg[0]} B4
+place_ports {seg[1]} A4
+place_ports {seg[2]} A3
+place_ports {seg[3]} B1
+place_ports {seg[4]} A1
+place_ports {seg[5]} B3
+place_ports {seg[6]} B2
+place_ports {seg[7]} D5
+place_ports {sel[0]} G6
+place_ports {sel[1]} E1
+set_property package_pin "" [get_ports [list  {sel[3]}]]
+place_ports {sel[2]} F1
+place_ports {sel[3]} G1
+place_ports {sel[4]} H1
+place_ports {sel[5]} C1
+place_ports {sel[6]} C2
+place_ports {sel[7]} G3
+place_ports {sel[7]} G2
+place_ports clk P17
+file mkdir D:/FPGA/xuehao/xuehao.srcs/constrs_1/new
+close [ open D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc w ]
+add_files -fileset constrs_1 D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc
+set_property target_constrs_file D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc [current_fileset -constrset]
+save_constraints -force
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1619.910 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 09:04:33 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+[Sat May  3 09:04:33 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 09:05:57 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+startgroup
+set_property package_pin "" [get_ports [list  {seg[0]}]]
+place_ports {seg[7]} B4
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[1]}]]
+place_ports {seg[6]} A4
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[2]}]]
+place_ports {seg[5]} A3
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {seg[3]}]]
+place_ports {seg[4]} B1
+endgroup
+place_ports {seg[3]} A1
+place_ports {seg[2]} B3
+place_ports {seg[1]} B2
+place_ports {seg[0]} D5
+save_constraints -force
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.059 ; gain = 0.000
+reset_run impl_1
+refresh_design
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 09:09:56 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+[Sat May  3 09:09:56 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 09:11:26 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 09:21:54 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2933.551 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_property package_pin "" [get_ports [list  rst]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst]]
+place_ports rst P5
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2954.016 ; gain = 0.000
+launch_runs impl_1 -jobs 10
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2954.016 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2954.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2954.016 ; gain = 0.000
+[Sat May  3 09:25:36 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+place_ports rst V1
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2954.016 ; gain = 0.000
+reset_run impl_1
+launch_runs impl_1 -jobs 10
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2954.016 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2954.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2954.016 ; gain = 0.000
+[Sat May  3 09:29:20 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 09:35:45 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sat May  3 09:36:26 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+CRITICAL WARNING: [HDL 9-806] Syntax error near ")". [D:/FPGA/xuehao/xuehao.srcs/sources_1/new/xuehao.v:5]
+[Sat May  3 09:37:55 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Sat May  3 09:38:57 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'rst'. [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst'. [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/FPGA/xuehao/xuehao.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2954.016 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -jobs 10
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2954.016 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2954.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2954.016 ; gain = 0.000
+[Sat May  3 09:40:15 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Sat May  3 09:41:33 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/xuehao/xuehao.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/xuehao/xuehao.runs/impl_1/seg_display.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  3 09:47:30 2025...

@@ -1,0 +1,4 @@
+Running: xsim.dir/xuehao_behav/xsimk.exe -simmode gui -wdb xuehao_behav.wdb -simrunnum 0 -socket 53617
+Design successfully loaded
+Design Loading Memory Usage: 8532 KB (Peak: 8532 KB)
+Design Loading CPU Usage: 0 ms
